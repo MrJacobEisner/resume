@@ -48,8 +48,6 @@
     section {
         margin-top: 14px;
     }
-    hr {
-    }
     .contact {
         margin: 8px 0px 14px 0px;
     }
@@ -60,6 +58,20 @@
         padding: 5px 50px;
         justify-content: center;
         margin: 0px -50px;
+    }
+    .copyable {
+        cursor: pointer;
+    }
+    .copied-badge {
+        margin-left: 6px;
+        font-size: 12px;
+        color: #188038;
+        opacity: 0;
+        transition: opacity 0.2s ease;
+        user-select: none;
+    }
+    .copied-badge.show {
+        opacity: 1;
     }
 </style>
 <html lang="en">
@@ -79,7 +91,16 @@
         <div class="contact">
             <p>
                 <b>Cell:</b> (805)-837-7266 <b>Email:</b>
-                <a href="mailto:mrjeisner@gmail.com">mrjeisner@gmail.com</a>
+                <span
+                    href="#"
+                    id="email-link"
+                    class="copyable"
+                    data-email="mrjeisner@gmail.com"
+                    >mrjeisner@gmail.com</span
+                >
+                <span id="email-copied" class="copied-badge" aria-hidden="true"
+                    >✓ Copied</span
+                >
             </p>
             <p>
                 <b>Github:</b>
@@ -237,5 +258,63 @@
                 </li>
             </ul>
         </section>
+        <script>
+            (function () {
+                const link = document.getElementById("email-link");
+                const badge = document.getElementById("email-copied");
+                if (!link) return;
+
+                function showBadge() {
+                    if (!badge) return;
+                    badge.classList.add("show");
+                    clearTimeout(badge._timer);
+                    badge._timer = setTimeout(() => {
+                        badge.classList.remove("show");
+                    }, 1200);
+                }
+
+                async function copyToClipboard(text) {
+                    try {
+                        if (navigator.clipboard && window.isSecureContext) {
+                            await navigator.clipboard.writeText(text);
+                        } else {
+                            const textarea = document.createElement("textarea");
+                            textarea.value = text;
+                            textarea.style.position = "fixed";
+                            textarea.style.opacity = "0";
+                            document.body.appendChild(textarea);
+                            textarea.focus();
+                            textarea.select();
+                            document.execCommand("copy");
+                            document.body.removeChild(textarea);
+                        }
+                        showBadge();
+                    } catch (err) {
+                        console.error("Failed to copy:", err);
+                    }
+                }
+
+                function handleCopy() {
+                    const email =
+                        link.getAttribute("data-email") ||
+                        link.textContent.trim();
+                    copyToClipboard(email);
+                }
+
+                link.addEventListener("click", function (e) {
+                    e.preventDefault();
+                    handleCopy();
+                });
+
+                link.setAttribute("role", "button");
+                link.setAttribute("aria-label", "Copy email to clipboard");
+                link.addEventListener("keydown", function (e) {
+                    if (e.key === "Enter" || e.key === " ") {
+                        e.preventDefault();
+                        handleCopy();
+                    }
+                });
+            })();
+        </script>
     </body>
 </html>
