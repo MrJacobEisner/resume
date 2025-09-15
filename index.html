@@ -34,15 +34,23 @@
         padding-inline-start: 18px;
     }
     body {
+        margin: 0;
+        background-color: rgb(240, 243, 247);
+        min-height: 100vh;
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+        padding: 12px 12px;
+    }
+    .container {
         max-width: 850px;
         background-color: white;
         padding: 45px 50px 50px 50px;
         border-radius: 5px;
         box-shadow: 0px 0px 30px #00000011;
+        margin: 0 auto;
     }
     html {
-        display: flex;
-        justify-content: center;
         background-color: rgb(240, 243, 247);
     }
     section {
@@ -74,12 +82,15 @@
         opacity: 1;
     }
     @media (max-width: 800px) {
-        body {
+        .container {
             padding: 20px 25px 25px 25px;
         }
         .blurb {
             margin: 0px -25px;
             padding: 5px 25px;
+        }
+        body {
+            padding: 6px 6px;
         }
     }
 </style>
@@ -95,186 +106,208 @@
             rel="stylesheet"
         />
     </head>
-    <header>
-        <h1>Jacob Eisner</h1>
-        <div class="contact">
-            <p>
-                <b>Cell:</b> (805)-837-7266 <b>Email:</b>
-                <span
-                    href="#"
-                    id="email-link"
-                    class="copyable"
-                    data-email="mrjeisner@gmail.com"
-                    >mrjeisner@gmail.com</span
-                >
-                <span id="email-copied" class="copied-badge" aria-hidden="true"
-                    >✓ Copied</span
-                >
-            </p>
-            <p>
-                <b>Github:</b>
-                <a href="https://github.com/MrJacobEisner" target="_blank"
-                    >MrJacobEisner</a
-                >
-                <b>Address:</b>
-                408 Warren St, Apt 2, Harrison NJ, 07029
-            </p>
-        </div>
-        <div class="blurb">
-            <i
-                >Developer at Barclays with experience in Java, SQL, React,
-                CI/CD, and enterprise software development. AI Native.</i
-            >
-        </div>
-    </header>
     <body>
-        <section>
-            <h2>Professional Experience</h2>
-            <h3>Barclays, Whippany, NJ</h3>
-            <i>Developer Analyst, June 2024 – Present</i>
-            <ul>
-                <li>
-                    Unblocked 500-person, $250M program by using AI generated
-                    scripts to rapidly analyze and diagnose a high-visibility,
-                    program-halting legacy data conflict, then developed and
-                    deployed the fix in 2 weeks, averting $1M in recurring
-                    weekly losses and earning global recognition from upper
-                    management.
-                </li>
-                <li>
-                    Delivered multiple, top-rated demos on using AI to generate
-                    robust, enterprise-grade code to 500+ colleagues, driving
-                    widespread gains in developer productivity, including an 8x
-                    increase (£50,000) for one team, and securing numerous
-                    repeat bookings from senior leadership.
-                </li>
-                <li>
-                    Served as the primary developer for a multi-agent AI
-                    proof-of-concept application, leveraging RAG and custom tool
-                    integration to streamline the generation and refinement of
-                    business requirements.
-                </li>
-                <li>
-                    Migrated >100 repositories to GitLab via custom automated
-                    script and implemented a universal CI/CD pipeline for every
-                    repository leading to faster build and deployment times and
-                    furthering adoption of shift left.
-                </li>
-            </ul>
-            <i>Developer Intern Analyst, June 2023 – Aug 2023</i>
-            <ul>
-                <li>
-                    Developed a dashboard that provides responsive analytics on
-                    a 20M+ entry database, significantly reducing SQL query and
-                    debugging time and offering features such as filtering,
-                    sorting, and exporting while displaying server health
-                    metrics including delay and load distribution.
-                </li>
-            </ul>
-            <h3>UCSB Associated Students, Santa Barbara, CA</h3>
-            <i>Director of Technology, Oct 2023 – June 2024</i>
-            <ul>
-                <li>
-                    Established the technology department for Associated
-                    Students from the ground up, recruited and managed two
-                    developers.
-                </li>
-                <li>
-                    Developed and deployed multiple internal applications to
-                    improve the appointment process, voting processes, and
-                    financial transparency of the organization.
-                </li>
-            </ul>
-            <h3>True North Mortgage, Calgary, AB</h3>
-            <i>Junior Software Developer, June 2022 – Sept 2022</i>
-            <ul>
-                <li>
-                    Developed, tested, and deployed a document editing web app
-                    from scratch.
-                </li>
-                <li>
-                    Designed and developed the editable mortgage documents used
-                    for every Quebec mortgage in just 2 months - saving $30,000
-                    in contractor fees.
-                </li>
-            </ul>
-        </section>
-        <section>
-            <h2>Education</h2>
-            <h3>UC Santa Barbara</h3>
-            <i>Computer Engineering B.S., Oct 2020 – June 2024</i>
-            <ul>
-                <li>
-                    Cumulative GPA: 3.59/4.00 (Senior Year GPA: 4.00); Dean’s
-                    Honors
-                </li>
-                <li>
-                    Led a 6-person team to win 1st place and $2,000 over 10
-                    competing teams at the 2024 UCSB Capstone Competition by
-                    developing an AI-powered video editor using AWS Rekognition
-                    to automatically create compelling real estate walkthroughs.
-                </li>
-                <li>
-                    Proficient CS principles such as Object Oriented
-                    Programming, Data Structures & Algorithms, Complexity
-                    Analysis, and AI/ML
-                </li>
-            </ul>
-        </section>
-        <section>
-            <h2>Miscellaneous</h2>
-            <h3>Personal Projects</h3>
-            <ul>
-                <li>
-                    Developed a Change Data Capture (CDC) program to track DOGE
-                    savings, uncovering data that fueled a news story garnering
-                    over 1 million impressions and television coverage.
-                    <a
-                        href="https://x.com/byMarkAlfred/status/1912586853074534773"
-                        target="_blank"
-                        >Mark Alfred on X</a
-                    >,
-                    <a
-                        href="https://www.the-independent.com/news/world/americas/us-politics/doge-savings-website-millions-vanish-b2735173.html"
-                        target="_blank"
-                        >The Independent</a
-                    >.
-                </li>
-                <li>
-                    Designed and developed multiple award-winning articles for
-                    the Daily Nexus, garnering 10,000+ visitors. See
-                    <a href="https://rb.gy/29kgb" target="_blank">article 1</a>,
-                    <a href="https://rb.gy/5ecvf" target="_blank">article 2</a>,
-                    <a href="https://rb.gy/9qpac" target="_blank">article 3</a>,
-                    <a href="https://rb.gy/j2t4h" target="_blank">article 4</a>.
-                </li>
-                <li>
-                    Created a personal portfolio website for my roommate using
-                    React. See
-                    <a href="https://markalfred.news" target="_blank"
-                        >markalfred.news</a
-                    >.
-                </li>
-                <li>
-                    Awarded 3rd Place, Men's Physique (Novice Division), at the
-                    2024 Muscle Contest International LA Grand Prix.
-                </li>
-            </ul>
-            <h3>Skills/Technologies</h3>
-            <ul>
-                <li>
-                    Languages & Databases: Java, Python, Oracle SQL, TypeScript
-                </li>
-                <li>
-                    Frameworks & Tools: React, Jenkins, Kafka, Camel, Docker,
-                    Git, GCP, Figma
-                </li>
-                <li>
-                    Domain Knowledge: Securities Operations, Enterprise Software
-                    Development, CI/CD
-                </li>
-            </ul>
-        </section>
+        <div class="container">
+            <header>
+                <h1>Jacob Eisner</h1>
+                <div class="contact">
+                    <p>
+                        <b>Cell:</b> (805)-837-7266 <b>Email:</b>
+                        <span
+                            href="#"
+                            id="email-link"
+                            class="copyable"
+                            data-email="mrjeisner@gmail.com"
+                            >mrjeisner@gmail.com</span
+                        >
+                        <span
+                            id="email-copied"
+                            class="copied-badge"
+                            aria-hidden="true"
+                            >✓ Copied</span
+                        >
+                    </p>
+                    <p>
+                        <b>Github:</b>
+                        <a
+                            href="https://github.com/MrJacobEisner"
+                            target="_blank"
+                            >MrJacobEisner</a
+                        >
+                        <b>Address:</b>
+                        408 Warren St, Apt 2, Harrison NJ, 07029
+                    </p>
+                </div>
+                <div class="blurb">
+                    <i
+                        >Developer at Barclays with experience in Java, SQL,
+                        React, CI/CD, and enterprise software development. AI
+                        Native.</i
+                    >
+                </div>
+            </header>
+            <section>
+                <h2>Professional Experience</h2>
+                <h3>Barclays, Whippany, NJ</h3>
+                <i>Developer Analyst, June 2024 – Present</i>
+                <ul>
+                    <li>
+                        Unblocked 500-person, $250M program by using AI
+                        generated scripts to rapidly analyze and diagnose a
+                        high-visibility, program-halting legacy data conflict,
+                        then developed and deployed the fix in 2 weeks, averting
+                        $1M in recurring weekly losses and earning global
+                        recognition from upper management.
+                    </li>
+                    <li>
+                        Delivered multiple, top-rated demos on using AI to
+                        generate robust, enterprise-grade code to 500+
+                        colleagues, driving widespread gains in developer
+                        productivity, including an 8x increase (£50,000) for one
+                        team, and securing numerous repeat bookings from senior
+                        leadership.
+                    </li>
+                    <li>
+                        Served as the primary developer for a multi-agent AI
+                        proof-of-concept application, leveraging RAG and custom
+                        tool integration to streamline the generation and
+                        refinement of business requirements.
+                    </li>
+                    <li>
+                        Migrated >100 repositories to GitLab via custom
+                        automated script and implemented a universal CI/CD
+                        pipeline for every repository leading to faster build
+                        and deployment times and furthering adoption of shift
+                        left.
+                    </li>
+                </ul>
+                <i>Developer Intern Analyst, June 2023 – Aug 2023</i>
+                <ul>
+                    <li>
+                        Developed a dashboard that provides responsive analytics
+                        on a 20M+ entry database, significantly reducing SQL
+                        query and debugging time and offering features such as
+                        filtering, sorting, and exporting while displaying
+                        server health metrics including delay and load
+                        distribution.
+                    </li>
+                </ul>
+                <h3>UCSB Associated Students, Santa Barbara, CA</h3>
+                <i>Director of Technology, Oct 2023 – June 2024</i>
+                <ul>
+                    <li>
+                        Established the technology department for Associated
+                        Students from the ground up, recruited and managed two
+                        developers.
+                    </li>
+                    <li>
+                        Developed and deployed multiple internal applications to
+                        improve the appointment process, voting processes, and
+                        financial transparency of the organization.
+                    </li>
+                </ul>
+                <h3>True North Mortgage, Calgary, AB</h3>
+                <i>Junior Software Developer, June 2022 – Sept 2022</i>
+                <ul>
+                    <li>
+                        Developed, tested, and deployed a document editing web
+                        app from scratch.
+                    </li>
+                    <li>
+                        Designed and developed the editable mortgage documents
+                        used for every Quebec mortgage in just 2 months - saving
+                        $30,000 in contractor fees.
+                    </li>
+                </ul>
+            </section>
+            <section>
+                <h2>Education</h2>
+                <h3>UC Santa Barbara</h3>
+                <i>Computer Engineering B.S., Oct 2020 – June 2024</i>
+                <ul>
+                    <li>
+                        Cumulative GPA: 3.59/4.00 (Senior Year GPA: 4.00);
+                        Dean’s Honors
+                    </li>
+                    <li>
+                        Led a 6-person team to win 1st place and $2,000 over 10
+                        competing teams at the 2024 UCSB Capstone Competition by
+                        developing an AI-powered video editor using AWS
+                        Rekognition to automatically create compelling real
+                        estate walkthroughs.
+                    </li>
+                    <li>
+                        Proficient CS principles such as Object Oriented
+                        Programming, Data Structures & Algorithms, Complexity
+                        Analysis, and AI/ML
+                    </li>
+                </ul>
+            </section>
+            <section>
+                <h2>Miscellaneous</h2>
+                <h3>Personal Projects</h3>
+                <ul>
+                    <li>
+                        Developed a Change Data Capture (CDC) program to track
+                        DOGE savings, uncovering data that fueled a news story
+                        garnering over 1 million impressions and television
+                        coverage.
+                        <a
+                            href="https://x.com/byMarkAlfred/status/1912586853074534773"
+                            target="_blank"
+                            >Mark Alfred on X</a
+                        >,
+                        <a
+                            href="https://www.the-independent.com/news/world/americas/us-politics/doge-savings-website-millions-vanish-b2735173.html"
+                            target="_blank"
+                            >The Independent</a
+                        >.
+                    </li>
+                    <li>
+                        Designed and developed multiple award-winning articles
+                        for the Daily Nexus, garnering 10,000+ visitors. See
+                        <a href="https://rb.gy/29kgb" target="_blank"
+                            >article 1</a
+                        >,
+                        <a href="https://rb.gy/5ecvf" target="_blank"
+                            >article 2</a
+                        >,
+                        <a href="https://rb.gy/9qpac" target="_blank"
+                            >article 3</a
+                        >,
+                        <a href="https://rb.gy/j2t4h" target="_blank"
+                            >article 4</a
+                        >.
+                    </li>
+                    <li>
+                        Created a personal portfolio website for my roommate
+                        using React. See
+                        <a href="https://markalfred.news" target="_blank"
+                            >markalfred.news</a
+                        >.
+                    </li>
+                    <li>
+                        Awarded 3rd Place, Men's Physique (Novice Division), at
+                        the 2024 Muscle Contest International LA Grand Prix.
+                    </li>
+                </ul>
+                <h3>Skills/Technologies</h3>
+                <ul>
+                    <li>
+                        Languages & Databases: Java, Python, Oracle SQL,
+                        TypeScript
+                    </li>
+                    <li>
+                        Frameworks & Tools: React, Jenkins, Kafka, Camel,
+                        Docker, Git, GCP, Figma
+                    </li>
+                    <li>
+                        Domain Knowledge: Securities Operations, Enterprise
+                        Software Development, CI/CD
+                    </li>
+                </ul>
+            </section>
+        </div>
         <script>
             (function () {
                 const link = document.getElementById("email-link");
