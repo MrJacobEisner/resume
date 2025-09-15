@@ -57,7 +57,7 @@
         margin-top: 8px;
     }
     .contact {
-        margin: 8px 0px 14px 0px;
+        margin: 4px 0px 8px 0px;
     }
     .blurb {
         display: flex;
@@ -70,13 +70,27 @@
     .copyable {
         cursor: pointer;
     }
+    .copy-wrap {
+        position: relative;
+        display: inline-block;
+    }
     .copied-badge {
-        margin-left: 6px;
+        position: absolute;
+        left: 0;
+        top: 100%;
+        transform: none;
+        margin-left: 0;
+        margin-top: 4px;
         font-size: 12px;
         color: #188038;
+        background-color: #e6f4ea;
+        padding: 2px 6px;
+        border-radius: 3px;
         opacity: 0;
         transition: opacity 0.2s ease;
         user-select: none;
+        white-space: nowrap;
+        pointer-events: none;
     }
     .copied-badge.show {
         opacity: 1;
@@ -112,30 +126,29 @@
                 <h1>Jacob Eisner</h1>
                 <div class="contact">
                     <p>
-                        <b>Cell:</b> (805)-837-7266 <b>Email:</b>
-                        <span
-                            href="#"
-                            id="email-link"
-                            class="copyable"
-                            data-email="mrjeisner@gmail.com"
-                            >mrjeisner@gmail.com</span
-                        >
-                        <span
-                            id="email-copied"
-                            class="copied-badge"
-                            aria-hidden="true"
-                            >✓ Copied</span
-                        >
-                    </p>
-                    <p>
-                        <b>Github:</b>
+                        <b>Cell:</b> (805) 837-7266 | <b>Email:</b>
+                        <span class="copy-wrap">
+                            <span
+                                href="#"
+                                id="email-link"
+                                class="copyable"
+                                data-email="mrjeisner@gmail.com"
+                                >mrjeisner@gmail.com</span
+                            >
+                            <span
+                                id="email-copied"
+                                class="copied-badge"
+                                aria-hidden="true"
+                                >✓ Copied</span
+                            >
+                        </span>
+                        | <b>Github:</b>
                         <a
                             href="https://github.com/MrJacobEisner"
                             target="_blank"
                             >MrJacobEisner</a
                         >
-                        <b>Address:</b>
-                        408 Warren St, Apt 2, Harrison NJ, 07029
+                        | Harrison, NJ
                     </p>
                 </div>
                 <div class="blurb">
@@ -148,16 +161,16 @@
             </header>
             <section>
                 <h2>Professional Experience</h2>
-                <h3>Barclays, Whippany, NJ</h3>
-                <i>Developer Analyst, June 2024 – Present</i>
+                <h3>Barclays</h3>
+                <i>Developer Analyst, June 2024 – Present (Whippany, NJ)</i>
                 <ul>
                     <li>
                         Unblocked 500-person, $250M program by using AI
                         generated scripts to rapidly analyze and diagnose a
                         high-visibility, program-halting legacy data conflict,
                         then developed and deployed the fix in 2 weeks, averting
-                        $1M in recurring weekly losses and earning global
-                        recognition from upper management.
+                        $1M in recurring weekly losses and earning recognition
+                        from upper management.
                     </li>
                     <li>
                         Delivered multiple, top-rated demos on using AI to
@@ -181,7 +194,7 @@
                         left.
                     </li>
                 </ul>
-                <i>Developer Intern Analyst, June 2023 – Aug 2023</i>
+                <i>Developer Analyst Intern, June 2023 – Aug 2023</i>
                 <ul>
                     <li>
                         Developed a dashboard that provides responsive analytics
@@ -192,13 +205,15 @@
                         distribution.
                     </li>
                 </ul>
-                <h3>UCSB Associated Students, Santa Barbara, CA</h3>
-                <i>Director of Technology, Oct 2023 – June 2024</i>
+                <h3>UCSB Associated Students</h3>
+                <i
+                    >Director of Technology, Oct 2023 – June 2024, (Santa
+                    Barbara, CA)</i
+                >
                 <ul>
                     <li>
                         Established the technology department for Associated
-                        Students from the ground up, recruited and managed two
-                        developers.
+                        Students and recruited/managed two developers.
                     </li>
                     <li>
                         Developed and deployed multiple internal applications to
@@ -206,17 +221,19 @@
                         financial transparency of the organization.
                     </li>
                 </ul>
-                <h3>True North Mortgage, Calgary, AB</h3>
-                <i>Junior Software Developer, June 2022 – Sept 2022</i>
+                <h3>True North Mortgage</h3>
+                <i
+                    >Junior Software Developer, June 2022 – Sept 2022, (Calgary,
+                    AB)</i
+                >
                 <ul>
                     <li>
-                        Developed, tested, and deployed a document editing web
-                        app from scratch.
+                        Developed and deployed a document editing application
+                        letting users rapidly generate documents for clients.
                     </li>
                     <li>
                         Designed and developed the editable mortgage documents
-                        used for every Quebec mortgage in just 2 months - saving
-                        $30,000 in contractor fees.
+                        in just 2 months - saving $30,000 in contractor fees.
                     </li>
                 </ul>
             </section>
@@ -227,19 +244,18 @@
                 <ul>
                     <li>
                         Cumulative GPA: 3.59/4.00 (Senior Year GPA: 4.00);
-                        Dean’s Honors
+                        Dean’s Honors.
                     </li>
                     <li>
-                        Led a 6-person team to win 1st place and $2,000 over 10
-                        competing teams at the 2024 UCSB Capstone Competition by
-                        developing an AI-powered video editor using AWS
-                        Rekognition to automatically create compelling real
-                        estate walkthroughs.
+                        Led a 6-person team to win 1st place and $2,000 at the
+                        2024 UCSB Capstone Competition by developing an
+                        AI-powered video editor using AWS Rekognition to
+                        automatically create compelling real estate
+                        walkthroughs.
                     </li>
                     <li>
-                        Proficient CS principles such as Object Oriented
-                        Programming, Data Structures & Algorithms, Complexity
-                        Analysis, and AI/ML
+                        Proficient CS principles: Object Oriented Programming,
+                        Data Structures & Algorithms, AI/ML.
                     </li>
                 </ul>
             </section>
@@ -248,8 +264,8 @@
                 <h3>Personal Projects</h3>
                 <ul>
                     <li>
-                        Developed a Change Data Capture (CDC) program to track
-                        DOGE savings, uncovering data that fueled a news story
+                        Developed a Change Data Capture program to track DOGE
+                        savings, uncovering data that fueled a news story
                         garnering over 1 million impressions and television
                         coverage.
                         <a
@@ -280,8 +296,8 @@
                         >.
                     </li>
                     <li>
-                        Created a personal portfolio website for my roommate
-                        using React. See
+                        Created a friend’s personal portfolio website using
+                        React and Figma. See
                         <a href="https://markalfred.news" target="_blank"
                             >markalfred.news</a
                         >.
